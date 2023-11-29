@@ -1,0 +1,30 @@
+{% extends 'layout.html ' %} {% block content %}
+    <h1>Selamat Datang {{name}}</h1>
+    <form  action="/simpan_register" method="post">
+        <table>
+            <tr class="fw-bold">
+                <td class="">NIK Anda</td>
+                <td>:</td>
+                <td>
+                    <input type="text" name="NIK" class="rounded-3">
+                </td>
+            </tr>
+            <tr class="fw-bold">
+                <td>Nama Anda</td>
+                <td>:</td>
+                <td>
+                    <input type="text" name="nama" class="rounded-3 ">
+                </td>
+                <br>
+            </tr>
+            <tr class="fw-bold">
+                <td></td>
+                <td></td>
+                <td>
+                    <input type="submit" class="btn btn-dark text-light rounded-3 " value="Simpan">
+                </td>
+                <br>
+            </tr>
+        </table>
+    </form>
+    {% endblock %}

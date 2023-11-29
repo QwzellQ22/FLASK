@@ -1,0 +1,39 @@
+{% extends 'layout.html ' %} {% block content %}
+<form action="/simpan_catatan" method="post"></form>
+<table class="table" border="3">
+  <tr>
+    <td>
+      <span>Urutkan Berdasarkan</span>
+    </td>
+    <td>
+      <select name="" id="" class="from-select">
+        <option value="">Tanggal</option>
+        <option value="">Waktu</option>
+        <option value="">Lokasi</option>
+        <option value="">Suhu</option>
+      </select>
+    </td>
+    <td>
+      <a href="" class="btn btn-success ">Urutkan</a>
+    </td>
+  </tr>
+  <tr>
+    <th scope="col">Tanggal</th>
+    <th scope="col">Waktu</th>
+    <th scope="col">Lokasi</th>
+    <th scope="col">Suhu</th>
+  </tr>
+  {% for d in data %}
+  <tr>
+    <td>{{d[1]}}</td>
+    <td>{{d[2]}}</td>
+    <td>{{d[3]}}</td>
+    <td>{{d[4]}}</td> 
+  </tr>
+  {% endfor %}
+ 
+</table>
+<td>
+  <a href="/beranda" class="btn btn-success">Kembali</a>
+</td>
+{% endblock %}

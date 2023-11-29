@@ -1,0 +1,42 @@
+{% extends 'layout.html ' %} {% block content %}
+
+<form action="/simpan_catatan" method="post" class="container-sm">
+    <tr>
+        <tr>Tanggal</tr>
+        <td>:</td>
+        <td>
+            <input type="date" name="tanggal" class="form-control shadow-lg">
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <tr>Jam</tr>
+        <td>:</td>
+        <td>
+            <input type="time" name="waktu" class="form-control shadow-lg">
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <tr>Lokasi yang Dikunjungi</tr>
+        <td>:</td>
+        <td>
+            <input type="text" name="lokasi" class=" form-control shadow-lg">
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <tr>Suhu Tubuh</tr>
+        <td>:</td>
+        <td>
+            <input type="text" name="suhu" class=" form-control shadow-lg">
+        </td>   
+    </tr>
+    <td>
+        <input type="submit" class="btn btn-success" value="Simpan Catatan"></input>
+    </td>
+</table>
+</form>
+
+
+{% endblock %}
